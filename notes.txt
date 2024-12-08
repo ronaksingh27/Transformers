@@ -1,0 +1,4 @@
+'self' means 'this istance of the class' instantly makes sense
+
+Gradient Descent :-
+new_value = old_value - step_size
