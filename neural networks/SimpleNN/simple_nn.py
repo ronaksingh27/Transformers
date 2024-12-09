@@ -26,7 +26,7 @@ torch.manual_seed(41)
 
 model = Model()#create an instance of the model
 
-url = '/Users/ronaksingh/Desktop/Transformers/neural networks/iris.csv'
+url = '/Users/ronaksingh/Desktop/Transformers/neural networks/SimpleNN/iris.csv'
 my_df = pd.read_csv(url)
 print(my_df.head())
 
@@ -92,6 +92,8 @@ plt.xlabel('Epochs')
 plt.ylabel('Loss')
 
 
+
+#test the model
 with torch.no_grad():
     y_val = model.forward(X_test)
     loss = criterion(y_val,y_test)
@@ -102,7 +104,7 @@ print(f'Loss : {loss}')
 correct = 0
 with torch.no_grad():
     for i,data in enumerate(X_test):
-        y_val = model.forward(data)
+        y_val = model(data)
             
         print(f'{i+1}.) {str(y_val)}  {y_val.argmax().item()} {y_test[i]}')
 
