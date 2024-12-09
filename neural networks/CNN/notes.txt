@@ -1,0 +1,9 @@
+Convolution :-
+Take an filter/kernel(to blur images) and apply it to the image 
+The term for dragging the matrix( filter ) across the image is called Convolution 
+CNNs have local connectivity
+
+RGB image : h,w,r | h,w,g | h,w,b
+
+Pooling :
+Reduce/SubSample the convolutional layer 
